@@ -15,4 +15,11 @@ function getComputerChoice(){
     }
    return choice
 }
-getComputerChoice();
+
+// criar funcao que recebe input case insensitive 
+function playerSelection(){
+    let playerChoice = prompt("Rock Paper or Scissors")
+    return playerChoice.toLowerCase();
+}
+// criar funcao que compara getComputerChoice com playerSelection e declara os vencedores
+
