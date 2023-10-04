@@ -13,13 +13,21 @@ function getComputerChoice(){
     else if (random === 2){
         choice = "Scissors";
     }
-   return choice
+   return choice.toLowerCase()
 }
 
 // criar funcao que recebe input case insensitive 
-function playerSelection(){
-    let playerChoice = prompt("Rock Paper or Scissors")
-    return playerChoice.toLowerCase();
+function playerSelection(){    
+    let keepGoing = true;
+    while(keepGoing){
+        let playerChoice = prompt("Rock Paper or Scissors").toLowerCase();
+        if (playerChoice != "rock" && playerChoice != "paper" && playerChoice != "scissors"){
+            console.log("Escolha invalida")
+        }
+        else{
+            keepGoing = false
+            return playerChoice
+        }
+    }
 }
 // criar funcao que compara getComputerChoice com playerSelection e declara os vencedores
-
