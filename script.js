@@ -51,7 +51,14 @@ function playRound(player, computer) {
   return text;
 }
 
-let player = playerSelection();
-const computer = getComputerChoice();
 
 
+function game(){
+    for(i = 0; i <= 5; i++){
+        let player = playerSelection();
+        const computer = getComputerChoice();
+        console.log(playRound(player, computer))
+    }
+}
+
+game();
